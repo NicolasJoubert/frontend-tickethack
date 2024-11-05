@@ -6,6 +6,11 @@ document.querySelector('#search_button').addEventListener('click', function() {
     fetch(`http://localhost:3000/search/${departureCity}/${arrivalCity}/${departureDate}`)
     .then (response=>response.json())
   .then(data => {
+    
+    
+    
+    
+    document.querySelector('#result_card').innerHTML='data.trip.departure,data.trip.arrival,data.trip.date,data.trip.price'
    console.log(data);
  });
 })
