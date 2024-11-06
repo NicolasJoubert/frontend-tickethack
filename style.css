@@ -16,7 +16,7 @@ body
     height: 3vh;
     background-color : white;
     font-weight : bold; 
-    margin: 30px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     }
 
 .sub_header a 
@@ -25,6 +25,7 @@ body
     width: 250px;
     justify-content: center;
     color: #0cd393;
+    text-decoration: none;
     }
 
 .menu_item 
@@ -35,18 +36,20 @@ body
 
 
 
-.logo
+.logo img
     {
-    width: 150px;
-    margin-left: 40px;
-    margin-top:20px;
+   
+    margin-left: 30px;
+    width: 120px;
+
+   
     cursor: pointer;
 
     }
 
 #main_page
     {
-        background-image: url("../images/background.jpeg");
+        background-image: url("./images/background.jpg");
         background-size: cover;
         height: 95vh;
     }
@@ -67,7 +70,7 @@ h2
 #all_cards
     {
     display : flex; 
-    height: 400px;
+   
     justify-content : space-around;
     flex-direction: row;
     align-items : center;
@@ -81,7 +84,7 @@ h2
     padding: 10px;
     /* background-color: blue; */
     height: 350px;
-    width: 250px;
+    width: 300px;
 }
 
 #search_card_inputs
@@ -97,13 +100,24 @@ h2
 #result_card 
 {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     margin: 10px;
     padding: 10px;
-    /* background-color: blue; */
     height: 350px;
-    width: 250px;
+    width: 300px;
+    overflow: scroll
+
+}
+
+#beforebooking
+{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+align-self: center;
 
 }
 .card
@@ -112,12 +126,7 @@ h2
     border-radius : 25px;
     }
 
-.card img
-    {
 
-        height: 60%;
-        padding: 10px;
-    }
 input
     {
     background-color : rgb(227, 224, 224);
@@ -126,7 +135,11 @@ input
     border-radius: 5px;
     height: 30px;
     width: 100%;
+    font-family: "Lato", sans-serif;
+    
     }
+
+
 
 button 
     {
@@ -135,19 +148,55 @@ button
     align-self: center;
     color: white;
     border: none;
+    background-color: #0cd393;
+    border-radius: 5px;
 
     }
 
-h3
-{
 
-    align-self: center;
-    color: #0cd393;
-}
 
 
 #train_image 
 {
 
     width: 150px;
+}
+
+.trip-info 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    color: black;
+}
+
+
+
+.res_trip
+
+{
+
+width: 30px;
+height: 16px;
+font-size: 8px;
+
+}
+
+#res_depart_city,#res_arrival_city,#res_depart_date, #res_price
+
+{
+
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#result_def_mess
+
+{
+
+color: #0cd393;
+
 }
