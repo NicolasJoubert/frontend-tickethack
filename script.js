@@ -9,16 +9,24 @@ document.querySelector("#search_button").addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      const resultCard = document.querySelector("#beforebooking");
+      const resultCard = document.querySelector("#result_card");
 
       if (data.result && data.trip.length > 0) {
+console.log(document.querySelector("#beforebooking"));
+
+        document.querySelector("#beforebooking").style.display = "none"; 
         for (let i = 0; i < data.trip.length; i++) {
           const tripDetails = `<div class="trip-info">
-                        <h3>Départ: ${data.trip[i].departure}</h3>
-                        <p>Arrivée: ${data.trip[i].arrival}</p>
-                        <p>Date: ${new Date(data.trip[i].date).toLocaleDateString()}</p>
-                        <p>Prix: ${data.trip[i].price} €</p>
-                    </div>`;
+                        <h3 id="res_depart_city">${data.trip[i].departure} </h3>
+                        <span> > </span>
+                        <p id="res_arrival_city">${data.trip[i].arrival} </p>
+                        <p id="res_depart_date"> ${new Date(data.trip[i].date).toLocaleDateString()} </p>
+                        <p id="res_price"> ${data.trip[i].price} € </p>
+                        
+				                    <button class="res_trip" id="${departureCity}.${arrivalCity}.${departureDate}">Book</button>
+			                       
+                        
+                        </div>`;
           resultCard.innerHTML += tripDetails;
         }
       } else {
@@ -26,3 +34,5 @@ document.querySelector("#search_button").addEventListener("click", function () {
       }
     });
 });
+
+
