@@ -52,6 +52,7 @@ document.querySelector("#search_button").addEventListener("click", function () {
               .then((data) => {
                 if (data.result) {
                   console.log("Trip added to cart successfully!");
+                  window.location.href = "cart.html";
                 } else {
                   console.log("Failed to add trip to cart.");
                 }
