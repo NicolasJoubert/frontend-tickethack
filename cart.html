@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2789e31df4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="cart.css" />
+    <title>Panier</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="index.html">
+        <img src="./images/logo.jpeg" width="90px" alt="Logo" />
+      </a>
+      <div class="sub_header">
+        <a class="menu_item" href="cart.html">Cart</a>
+        <a class="menu_item" href="bookings.html">Bookings</a>
+      </div>
+    </header>
+    <div id="container">
+      <div id="cart">
+        <p class="">No tickect in your cart.</p>
+        <p class="">Why not plan trip?</p>
+      </div>
+    </div>
+    <div id="cart-container">
+      <div id="cart-ticket">
+        <p class="title-cart">My cart</p>
+        <div class="ticket-item">
+          <div class="destination">
+            <p>Paris</p>
+            >
+            <p>Lyon</p>
+          </div>
+          <p>20:09</p>
+          <p>103 €</p>
+          <button id="remove-ticket-btn">X</button>
+        </div>
+        <div id="purchase-container">
+          <p>Total : 230 €</p>
+          <button id="purchase-btn">Purchase</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  width: 100vw;
+  background-color: rgb(241, 244, 243);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: white;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+}
+
+.sub_header a {
+  width: 250px;
+  justify-content: center;
+  color: #0cd393;
+}
+
+.menu_item {
+  margin: 30px;
+}
+
+.logo {
+  width: 150px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+/* -------container EMPTY-------------  */
+#container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20vh;
+  background-color: white;
+}
+
+/* -------container with ticket-------------  */
+#cart-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cart-ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  min-height: 20vh;
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.ticket-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 90%;
+  background-color: rgb(241, 244, 243);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.destination {
+  display: flex;
+  align-items: center;
+}
+
+.destination > p {
+  padding: 10px;
+}
+
+#remove-ticket-btn {
+  background-color: rgb(78, 168, 145);
+  border: none;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#purchase-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(1, 22, 71);
+  color: white;
+  height: 80px;
+  align-items: center;
+}
+
+#purchase-container > p {
+  margin-left: 30px;
+}
+
+#purchase-btn {
+  background-color: rgb(78, 168, 145);
+  border: none;
+  border-radius: 12px;
+  width: auto;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  margin-right: 30px;
+}
