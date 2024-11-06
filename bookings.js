@@ -1,25 +1,30 @@
-document.querySelector("#BUYBUTTON").addEventListener("click", function () {
-
   fetch(
     `http://localhost:3000/bookings`
   )
     .then((response) => response.json())
     .then((data) => {
-     
-      if (data.result && data.length > 0) {
-        console.log(document.querySelector("#booking_container_blank"));
+console.log(data);
+    if (data.result && data.allBookings.length > 0) {
+    
+      document.querySelector("#booking_container_blank").style.display = "none";
 
-        document.querySelector("#booking_container_blank").style.display = "none";
+        for (let i = 0; i < data.allBookings.length; i++) {
+          const bookings = document.querySelector("#bookings");
 
-        for (let i = 0; i < data.length; i++) {
           const bookingDetails = `<div id="bookings">
-                        <h3 id="book_depart_city">${data[i].departure} </h3>
+                        <h3 id="book_depart_city">${data.allBookings[i].departure} </h3>
                         <span> > </span>
-                        <p id="book_arrival_city">${data[i].arrival} </p>
-                        <p id="book_depart_date"> ${new Date(data[i].date).toLocaleDateString()} </p>
-                        <p id="book_price"> ${data[i].price} € </p>
+                        <p id="book_arrival_city">${data.allBookings[i].arrival} </p>
+                        <p id="book_depart_date"> ${new Date(data.allBookings[i].date).toLocaleDateString()} </p>
+                        <p id="book_price"> ${data.allBookings[i].price} € </p>
+                        <p id= "remaining_time"> TIME REST </p>
 
-				          
                         </div>`;
-          bookings.innerHTML += bookingDetails;
-    }}})})
+                        bookings_cont.innerHTML += bookingDetails;
+    }}
+  
+  else {
+    document.querySelector("#booking_container_blank").style.display = "flex";
+
+
+  }})
