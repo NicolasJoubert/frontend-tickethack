@@ -1,51 +1,37 @@
-body 
-{
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    margin: 0;
-    width: 100vw;
-
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  width: 100vw;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3vh;
+  background-color: white;
+  font-weight: bold;
+  margin: 10px 10px 10px 10px;
+}
 
-.header 
-	{
-    display: flex; 
-    justify-content : space-between;
-    align-items : center;
-    height: 3vh;
-    background-color : white;
-    font-weight : bold; 
-    margin: 10px 10px 10px 10px;
-    }
+.sub_header a {
+  width: 250px;
+  justify-content: center;
+  color: #0cd393;
+  text-decoration: none;
+}
 
-.sub_header a 
-    
-    {
-    width: 250px;
-    justify-content: center;
-    color: #0cd393;
-    text-decoration: none;
-    }
+.menu_item {
+  margin: 30px;
+}
 
-.menu_item 
-    {
-    margin: 30px;
-    }
+.logo img {
+  margin-left: 30px;
+  width: 120px;
 
-
-
-
-.logo img
-    {
-   
-    margin-left: 30px;
-    width: 120px;
-
-   
-    cursor: pointer;
-
-    }
+  cursor: pointer;
+}
 
 /* -------container EMPTY-------------  */
 #container {
@@ -108,7 +94,7 @@ body
   padding: 10px;
 }
 
-#remove-ticket-btn {
+.remove-ticket-btn {
   background-color: rgb(78, 168, 145);
   border: none;
   border-radius: 12px;
